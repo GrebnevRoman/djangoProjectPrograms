@@ -1,0 +1,17 @@
+body{
+
+}
+aside{
+    float: left;
+    width: 20%;
+    padding: 1%;
+    height: 150vh;
+    border-right: 5px solid #4d4d4d
+}
+
+.features  {
+    float: left;
+    margin-top: 10px;
+    text-align: center;
+    width: 75%;
+}

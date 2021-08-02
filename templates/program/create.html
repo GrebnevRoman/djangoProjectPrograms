@@ -1,0 +1,18 @@
+{% extends 'program/base.html' %}
+{% block content %}
+        <div class="features">
+        <h1>Введите информацию о программе</h1>
+        <form method="post">
+            {% csrf_token %}
+            {{ form.Name }}<br><br>
+            {{ form.Code }}<br><br>
+            {{ form.Dep }}<br><br>
+            {{ form.Classroom_hours }}<br><br>
+            {{ form.Type }}<br><br>
+            {{ form.General_hours }}<br><br>
+            {{ form.Specialty }}<br><br>
+            <span>{{ error }}</span>
+            <button type="submit">Добавить программу</button>
+        </form>
+        </div>
+{% endblock %}

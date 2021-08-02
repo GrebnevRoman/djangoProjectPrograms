@@ -1,0 +1,22 @@
+{% extends 'program/base.html' %}
+
+{% block content %}
+    <div class="features">
+        <h1>База данных программ</h1>
+        <p>
+            Поиск по названию программы, специальностям, шифру кафедры
+        </p>
+        <form action="{% url 'search_res' %}" method="get">
+            <label>
+                <input name="q" type="text" placeholder="Искать программу">
+            </label>
+
+        </form>
+        <hr>
+        <form action="{% url 'create_program' %}" method="get">
+            <button>Создать программу</button>
+        </form>
+    </div>
+
+
+{% endblock %}

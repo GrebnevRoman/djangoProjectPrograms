@@ -1,0 +1,30 @@
+{% extends 'program/base.html' %}
+
+{% block content %}
+    <div class="features">
+        <h1>Результаты запроса</h1>
+        <ul>
+            {% for program in object_list %}
+                <li>
+                    <h2>
+                        Название: {{ program.Name }}
+                    </h2>
+                    <p>
+                        Кафедра: {{ program.Dep }}
+                    </p>
+                    <p>
+                        Номер: {{ program.Code }}
+                    </p>
+                    <p>
+                        Аудиторные часы :{{ program.Classroom_hours }}
+                    </p>
+                    Специальности :{% for spec in program.Specialty.all %}
+                    {{ spec }}
+                {% endfor %}
+                    <hr>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+{% endblock %}
